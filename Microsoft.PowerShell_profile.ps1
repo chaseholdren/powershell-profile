@@ -15,7 +15,7 @@ $updateInterval = 7
 ############                                                                                                         ############
 ############                DO NOT MODIFY THIS FILE. THIS FILE IS HASHED AND UPDATED AUTOMATICALLY.                  ############
 ############                    ANY CHANGES MADE TO THIS FILE WILL BE OVERWRITTEN BY COMMITS TO                      ############
-############                       https://github.com/ChrisTitusTech/powershell-profile.git.                         ############
+############                       https://github.com/chaseholdren/powershell-profile.git.                         ############
 ############                                                                                                         ############
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
 ############                                                                                                         ############
@@ -58,7 +58,7 @@ if ($repo_root_Override){
     # then use it instead
     $repo_root = $repo_root_Override
 } else {
-    $repo_root = "https://raw.githubusercontent.com/ChrisTitusTech"
+    $repo_root = "https://raw.githubusercontent.com/chaseholdren"
 }
 
 # Define the path to the file that stores the last execution time
@@ -700,4 +700,7 @@ if (Test-Path "$PSScriptRoot\CTTcustom.ps1") {
     Invoke-Expression -Command "& `"$PSScriptRoot\CTTcustom.ps1`""
 }
 
-# Write-Host "$($PSStyle.Foreground.Yellow)Use 'Show-Help' to display help$($PSStyle.Reset)"
+function help {
+    Get-Help
+	Show-Help
+}
