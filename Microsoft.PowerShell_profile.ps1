@@ -271,7 +271,7 @@ if ($EDITOR_Override){
 }
 # Quick Access to Editing the Profile
 function Edit-Profile {
-    vim $PROFILE.CurrentUserAllHosts
+    . $EDITOR $PROFILE.CurrentUserAllHosts
 }
 Set-Alias -Name ep -Value Edit-Profile
 
